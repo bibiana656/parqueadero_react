@@ -1,3 +1,4 @@
+import './Login.css';
 import logo from './assets/logo.png';
 
 function Login() {
