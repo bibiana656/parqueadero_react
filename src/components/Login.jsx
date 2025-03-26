@@ -1,5 +1,4 @@
-import "./assets/css/tailwind.output.css";
-import fondo from './assets/img/fondo.jpg'
+import fondo from '../assets/img/fondo.jpg'
 
 function Login() {
   return (
