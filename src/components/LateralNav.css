@@ -1,67 +1,98 @@
 .sidebar {
-    width: 16rem;
-    overflow-y: auto;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .sidebar-content {
-    padding: 1rem;
-    color: gray;
-  }
-  
-  .sidebar-title {
-    display: block;
-    margin-left: 1.5rem;
-    font-size: 1.125rem;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .sidebar-menu {
-    margin-top: 1.5rem;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar-menu li {
-    padding: 0.75rem 1.5rem;
-  }
-  
-  .sidebar-menu a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: gray;
-    transition: color 0.15s;
-  }
-  
-  .sidebar-menu a:hover {
-    color: black;
-  }
-  
-  .sidebar-footer {
-    padding: 1.5rem;
-  }
-  
-  .sidebar-footer button {
-    width: 100%;
-    padding: 0.5rem;
-    background-color: purple;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.15s;
-  }
-  
-  .sidebar-footer button:hover {
-    background-color: darkpurple;
-  }
-  
-  .icon {
-    margin-right: 8px;
-    vertical-align: middle;
-    color: purple
-  
-  }
+  width: 16rem;
+  overflow-y: auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark .sidebar {
+  background-color: #2d3748;
+}
+
+.sidebar-content {
+  padding: 1rem;
+  color: #718096;
+}
+
+.dark .sidebar-content {
+  color: #a0aec0;
+}
+
+.sidebar-title {
+  display: block;
+  margin-left: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #4a5568;
+}
+
+.dark .sidebar-title {
+  color: #e2e8f0;
+}
+
+.sidebar-menu {
+  margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 0.75rem 1.5rem;
+}
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #718096;
+  transition: color 0.15s;
+}
+
+.dark .sidebar-menu a {
+  color: #a0aec0;
+}
+
+.sidebar-menu a:hover {
+  color: #4a5568;
+}
+
+.dark .sidebar-menu a:hover {
+  color: #e2e8f0;
+}
+
+.sidebar-footer {
+  padding: 1.5rem;
+}
+
+.sidebar-footer button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #800080; /* purple */
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.dark .sidebar-footer button {
+  background-color: #6b46c1;
+}
+
+.sidebar-footer button:hover {
+  background-color: #660066; /* darkpurple */
+}
+
+.dark .sidebar-footer button:hover {
+  background-color: #553c9a;
+}
+
+.icon {
+  margin-right: 8px;
+  vertical-align: middle;
+  color: #800080; /* purple */
+}
+
+.dark .icon {
+  color: #6b46c1;
+}
