@@ -1,9 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Login from './Login'
+import LateralNav from './LateralNav'
+// import Login from './Login'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Login/>
+    <LateralNav/>
+    {/* <Login/> */}
   </StrictMode>,
 )
