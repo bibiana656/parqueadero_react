@@ -1,11 +1,12 @@
+import "./assets/css/tailwind.output.css";
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import LateralNav from './LateralNav'
-// import Login from './Login'
+import Login from './components/Login'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <LateralNav/>
-    {/* <Login/> */}
+  
+    <Login/>
   </StrictMode>,
 )
+
