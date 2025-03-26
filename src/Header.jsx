@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header-container">
       <div className="header-content">
-        {/* Logo aligned to the far left */}
+        {/* Logo */}
         <div className="header-logo">
           <img
             src="/logo_parqueadero.png"
@@ -14,9 +14,9 @@ function Header() {
           />
         </div>
 
-        {/* Profile menu and dark mode toggle aligned to the far right */}
+        {/* perfil y modo noche */}
         <div className="header-actions">
-          {/* Dark mode toggle */}
+          {/* boton modo noche */}
           <button
             className="header-darkmode-toggle"
             onClick={() => console.log("Toggle dark mode")}
@@ -35,7 +35,7 @@ function Header() {
             </svg>
           </button>
 
-          {/* Logout button */}
+          {/* Cerrar Sesion */}
           <button
             className="header-logout"
             onClick={() => console.log("Logout")}
