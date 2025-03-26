@@ -1,6 +1,6 @@
-import "./assets/css/tailwind.output.css";
 import "./LateralNav.css";
 import { FaRegCalendar } from "react-icons/fa";
+import '../../src/index.css';
 
 
 
@@ -8,9 +8,6 @@ function LateralNav() {
     return (
         <aside className="sidebar">
           <div className="sidebar-content">
-            <a className="sidebar-title" href="#">
-              LOGO
-            </a>
             <ul className="sidebar-menu">
               <li>
                 <a href="#">
