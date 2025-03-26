@@ -74,37 +74,19 @@ function FormularioRegistro() {
                   <div className="form-group radio-group">
                     <label>Sexo</label>
                     <div className="radio-options">
-                      <label className="radio-label">
-                        <input
-                          type="radio"
-                          name="sexo"
-                          value="Hombre"
-                          checked={formData.sexo === 'Hombre'}
-                          onChange={handleChange}
-                          required
-                        />
-                        <span>Hombre</span>
-                      </label>
-                      <label className="radio-label">
-                        <input
-                          type="radio"
-                          name="sexo"
-                          value="Mujer"
-                          checked={formData.sexo === 'Mujer'}
-                          onChange={handleChange}
-                        />
-                        <span>Mujer</span>
-                      </label>
-                      <label className="radio-label">
-                        <input
-                          type="radio"
-                          name="sexo"
-                          value="Binario"
-                          checked={formData.sexo === 'Binario'}
-                          onChange={handleChange}
-                        />
-                        <span>Binario</span>
-                      </label>
+                      {['Hombre', 'Mujer', 'Binario'].map((option) => (
+                        <label key={option} className="radio-label">
+                          <input
+                            type="radio"
+                            name="sexo"
+                            value={option}
+                            checked={formData.sexo === option}
+                            onChange={handleChange}
+                            required={option === 'Hombre'}
+                          />
+                          <span>{option}</span>
+                        </label>
+                      ))}
                     </div>
                   </div>
                   <div className="form-group">
