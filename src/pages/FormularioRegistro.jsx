@@ -1,22 +1,22 @@
-import { useState } from 'react';
-import { FaUser, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useState } from "react";
+import { FaUser, FaEye, FaEyeSlash } from "react-icons/fa";
 import Header from "../components/Header";
 import LateralNav from "../components/LateralNav";
 import "./FormularioRegistro.css";
 
 function FormularioRegistro() {
   const [formData, setFormData] = useState({
-    tipoDocumento: '',
-    documento: '',
-    nombre: '',
-    apellido: '',
-    sexo: '',
-    telefono: '',
-    correo: '',
-    rol: '',
-    usuario: '',
-    contrasena: '',
-    confirmar: '',
+    tipoDocumento: "",
+    documento: "",
+    nombre: "",
+    apellido: "",
+    sexo: "",
+    telefono: "",
+    correo: "",
+    rol: "",
+    usuario: "",
+    contrasena: "",
+    confirmar: "",
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
@@ -29,10 +29,10 @@ function FormularioRegistro() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.contrasena !== formData.confirmar) {
-      alert('Las contraseñas no coinciden');
+      alert("Las contraseñas no coinciden");
       return;
     }
-    console.log('Formulario enviado:', formData);
+    console.log("Formulario enviado:", formData);
   };
 
   return (
@@ -47,7 +47,6 @@ function FormularioRegistro() {
             </h1>
             <form id="formularioRegistro" onSubmit={handleSubmit}>
               <div className="form-grid">
-                {/* Información Personal */}
                 <div className="form-column">
                   <div className="form-group">
                     <label>Nombre</label>
@@ -74,7 +73,7 @@ function FormularioRegistro() {
                   <div className="form-group radio-group">
                     <label>Sexo</label>
                     <div className="radio-options">
-                      {['Hombre', 'Mujer', 'Binario'].map((option) => (
+                      {["Hombre", "Mujer", "Binario"].map((option) => (
                         <label key={option} className="radio-label">
                           <input
                             type="radio"
@@ -82,7 +81,7 @@ function FormularioRegistro() {
                             value={option}
                             checked={formData.sexo === option}
                             onChange={handleChange}
-                            required={option === 'Hombre'}
+                            required={option === "Hombre"}
                           />
                           <span>{option}</span>
                         </label>
@@ -111,8 +110,6 @@ function FormularioRegistro() {
                     />
                   </div>
                 </div>
-
-                {/* Información de Cuenta */}
                 <div className="form-column">
                   <div className="form-group">
                     <label>Tipo Documento</label>

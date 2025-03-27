@@ -1,10 +1,13 @@
-/* General container */
 .header-container {
-  z-index: 10;
-  padding: 0.75rem 0.5rem; /* Reducido el padding lateral para acercar los elementos a los extremos */
+  padding: 0.75rem 1rem;
   background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid #e5e7eb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .dark .header-container {
@@ -12,46 +15,33 @@
   border-bottom: 1px solid #374151;
 }
 
-/* Content wrapper */
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
   width: 100%;
-  max-width: none; /* Eliminado el max-width para usar todo el ancho disponible */
-  margin: 0; /* Sin márgenes para que ocupe los extremos */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Logo aligned to the far left */
 .header-logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-left: 0.5rem; /* Margen mínimo para no tocar el borde completamente */
 }
 
 .header-logo-img {
-  height: 3.5rem;
-  max-width: 80%;
-  object-fit: contain;
+  height: 2.5rem;
+  width: auto;
   transition: transform 0.2s ease;
 }
 
-/* Actions (dark mode + logout) aligned to the far right */
 .header-actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1.25rem;
-  margin-right: 0.5rem; /* Margen mínimo para no tocar el borde completamente */
+  gap: 1rem;
 }
 
-/* Botón modo noche */
 .header-darkmode-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0.5rem;
   border-radius: 50%;
   border: none;
@@ -59,23 +49,17 @@
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.dark .header-darkmode-toggle {
-  background: #374151;
-}
 
 .header-darkmode-toggle:hover {
   transform: scale(1.1);
 }
 
-.dark .header-darkmode-toggle:hover {
-  background: #4b5563;
-}
+
 
 .header-darkmode-icon {
   width: 1.5rem;
   height: 1.5rem;
   color: #6b7280;
-  transition: color 0.2s ease;
 }
 
 .dark .header-darkmode-icon {
@@ -83,14 +67,12 @@
 }
 
 .header-darkmode-toggle:hover .header-darkmode-icon {
-  color: #4f46e5;
+  color: rgb(129, 56, 129);
 }
 
-/* Botón cerrar sesión */
 .header-logout {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -99,23 +81,18 @@
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.dark .header-logout {
-  background: #374151;
-}
+
 
 .header-logout:hover {
   transform: scale(1.05);
 }
 
-.dark .header-logout:hover {
-  background: #4b5563;
-}
+
 
 .header-logout-icon {
   width: 1.5rem;
   height: 1.5rem;
   color: #6b7280;
-  transition: color 0.2s ease;
 }
 
 .dark .header-logout-icon {
@@ -130,7 +107,6 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: #6b7280;
-  transition: color 0.2s ease;
 }
 
 .dark .header-logout-text {
@@ -141,31 +117,28 @@
   color: #dc2626;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .header-container {
-    padding: 0.5rem 0.25rem; /* Aún más cerca de los extremos en móviles */
+    padding: 0.5rem;
   }
-
-  .header-content {
-    flex-direction: row;
-    justify-content: space-between;
+  .header-logo-img {
+    height: 2rem;
   }
-
   .header-actions {
-    gap: 0.75rem;
-    margin-right: 0.25rem; /* Margen mínimo en móviles */
+    gap: 0.5rem;
   }
-
-  .header-logo {
-    margin-left: 0.25rem; /* Margen mínimo en móviles */
-  }
-
   .header-logout-text {
     display: none;
   }
+}
 
-  .header-logout {
-    padding: 0.5rem;
+@media (max-width: 480px) {
+  .header-logo-img {
+    height: 1.8rem;
+  }
+  .header-darkmode-icon,
+  .header-logout-icon {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 }

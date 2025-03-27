@@ -27,7 +27,6 @@ function Header() {
   return (
     <header className="header-container">
       <div className="header-content">
-        {/* Logo */}
         <div className="header-logo">
           <img
             src="/logo_parqueadero.png"
@@ -35,10 +34,7 @@ function Header() {
             className="header-logo-img"
           />
         </div>
-
-        {/* Perfil y modo noche */}
         <div className="header-actions">
-          {/* Botón modo noche */}
           <button
             className="header-darkmode-toggle"
             onClick={toggleDarkMode}
@@ -50,8 +46,6 @@ function Header() {
               <BsMoon className="header-darkmode-icon" />
             )}
           </button>
-
-          {/* Cerrar Sesión */}
           <button
             className="header-logout"
             onClick={handleLogout}
